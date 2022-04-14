@@ -5,8 +5,8 @@ services:
     volumes:
       - ./front/:/usr/src/app
     working_dir: /usr/src/app
-    environment: 
-      - REACT_NATIVE_PACKAGER_HOSTNAME=163.51.23.145
+    env_file:
+      - .env
     command: yarn start
     ports:
       - "19000:19000"
